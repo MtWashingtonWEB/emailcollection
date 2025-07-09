@@ -25,22 +25,6 @@
   <p>Enter your email below to access the internet.</p>
 
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefIP06nNOKfX2aQq0AR5SgLwTqMSoapBcgmTbq8Ry0vuFrKw/viewform?usp=dialog"></iframe>
-
-   <script>
-    const frame = document.getElementById("formFrame");
-    const redirectURL = "https://www.google.com"; // Or your UniFi success page
-
-    frame.onload = () => {
-      try {
-        const formURL = frame.contentWindow.location.href;
-        if (formURL.includes("formResponse")) {
-          window.location.href = redirectURL;
-        }
-      } catch (e) {
-        // Cross-origin error expected — do nothing
-      }
-    };
-  </script>
   
 </body>
 </html>
